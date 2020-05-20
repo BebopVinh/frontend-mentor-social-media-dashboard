@@ -40,73 +40,176 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 :root {
-	--lime-green: hsl(163, 72%, 41%);
-	--bright-red: hsl(356, 69%, 56%);
-	--facebook: hsl(208, 92%, 53%);
-	--twitter: hsl(203, 89%, 53%);
-	--instagram-start: hsl(37, 97%, 70%);
-	--instagram-end: hsl(329, 70%, 58%);
-	--youtube: hsl(348, 97%, 39%);
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram-start: hsl(37, 97%, 70%);
+  --instagram-end: hsl(329, 70%, 58%);
+  --youtube: hsl(348, 97%, 39%);
 
-	/* Light Theme */
-	--white: hsl(0, 0%, 100%);
-	--light-grayish-blue: hsl(227, 47%, 96%);
-	--dark-grayish-blue: hsl(228, 12%, 44%);
-	--very-dark-blue-: hsl(230, 17%, 14%);
+  /* Light Theme */
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-blue: hsl(227, 47%, 96%);
+  --dark-grayish-blue: hsl(228, 12%, 44%);
+  --very-dark-blue-: hsl(230, 17%, 14%);
 }
 
 * > {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .positive-following {
-	color: var(--lime-green);
+  color: var(--lime-green);
 }
 
 .negative-following {
-	color: var(--bright-red);
+  color: var(--bright-red);
 }
 
 .flex-center {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .social-media-container {
-	display: flex;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .social-media-card {
-	background-color: var(--light-grayish-blue);
-	width: 255px;
-	height: 215px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+  background-color: var(--light-grayish-blue);
+  width: 255px;
+  height: 215px;
+  display: flex;
+  flex-direction: column;
+	/* flex-wrap: wrap; */
+	justify-content: center;
 	align-items: center;
-	margin: 0px 15px;
-	border-radius: 4px;
+  border-radius: 4px;
 }
 
 .facebook {
-	border-top: 4px solid var(--facebook);
+  border-top: 4px solid var(--facebook);
 }
 .twitter {
-	border-top: 4px solid var(--twitter);
+  border-top: 4px solid var(--twitter);
 }
 .youtube {
-	border-top: 4px solid var(--youtube);
+  border-top: 4px solid var(--youtube);
 }
 
 .instagram {
-	border-image: linear-gradient(
-		to right,
-		var(--instagram-start),
-		var(--instagram-end)
-	);
-	border-image-width: 4px;
+  border: double 4px transparent;
+  border-radius: 4px;
+  border-image: linear-gradient(
+      to right,
+      var(--instagram-start),
+      var(--instagram-end)
+    )
+    25 25 stretch;
+  border-image-width: 4px 0px 0px 0px;
+}
+
+.toggle-group {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-dark {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 55px;
+  height: 33px;
+  border-radius: 20px;
+  margin: 0px 20px 0px 20px;
+  background-image: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  animation-name: toggle-left;
+  animation-duration: 0.1s;
+}
+
+.toggle-light {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 55px;
+  height: 33px;
+  border-radius: 20px;
+  margin: 0px 20px 0px 20px;
+  background-image: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  animation-name: toggle-right;
+  animation-duration: 0.1s;
+}
+
+.toggle:hover {
+  background-image: linear-gradient(
+    to right,
+    hsl(210, 78%, 66%),
+    hsl(146, 68%, 65%)
+  );
+  cursor: pointer;
+}
+
+.toggle-circle {
+  margin: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.toggle-circle.dark {
+  background-color: black;
+}
+
+.toggle-circle.light {
+  background-color: white;
+}
+
+@keyframes toggle-right {
+  0% {
+    justify-content: flex-start;
+  }
+  50% {
+    justify-content: center;
+  }
+  100% {
+    justify-content: flex-end;
+  }
+}
+
+@keyframes toggle-left {
+  0% {
+    justify-content: flex-end;
+  }
+  50% {
+    justify-content: center;
+  }
+  100% {
+    justify-content: flex-start;
+  }
 }

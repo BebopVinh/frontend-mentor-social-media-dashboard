@@ -21,16 +21,6 @@ export default function SocialMediaCard({
 		)
 	}
 
-	const divStyles = () => {
-		return title === "instagram"
-			? {
-					borderTop: `4px solid`,
-					borderImage:
-						"linear-gradient(to right, var(--instagram-start), var(--instagram-end)",
-			  }
-			: { borderTop: `4px solid var(--${title})` }
-	}
-
 	return (
 		<div className={`social-media-card ${title}`}>
 			<p className="flex-center">
