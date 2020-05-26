@@ -37,8 +37,6 @@
 	}
 } */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-
 :root {
 	--lime-green: hsl(163, 72%, 41%);
 	--bright-red: hsl(356, 69%, 56%);
@@ -66,10 +64,6 @@ div.App {
 	width: 100%;
 }
 
-body {
-	font-family: "Inter", sans-serif;
-}
-
 .positive-following {
 	color: var(--lime-green);
 }
@@ -84,6 +78,17 @@ body {
 }
 
 .social-media-container {
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+p {
+	font-size: 0.8em;
+}
+.header-content p {
+	color: var(--dark-grayish-blue);
 }
 
 header {
@@ -131,6 +136,18 @@ header {
 		)
 		25 25 stretch;
 	border-image-width: 4px 0px 0px 0px;
+}
+
+.bigger-text {
+	font-size: 3em;
+	font-weight: 700;
+	margin: 0px;
+}
+
+.spread-text {
+	letter-spacing: 7px;
+	text-transform: uppercase;
+	color: var(--dark-grayish-blue);
 }
 
 .toggle-group {
