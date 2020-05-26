@@ -24,7 +24,7 @@ export default function SocialMediaCard({
 	return (
 		<div className={`social-media-card ${title}`}>
 			<p className="flex-center">
-				<img src={icon} alt="icon image" style={{ padding: "0px 8px" }} />
+				<img src={icon} alt="icon" style={{ padding: "0px 8px" }} />
 				{username}
 			</p>
 			<div style={{ textAlign: "center" }}>
