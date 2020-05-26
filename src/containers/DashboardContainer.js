@@ -13,8 +13,8 @@ export default function DashboardContainer() {
 		<div className="social-media-container">
 			<header>
 				<div className="header-content">
-					<h1>Social Media Dashboard</h1>
-					<h4>Total Followers: 23,004</h4>
+					<h1 className="static-text">Social Media Dashboard</h1>
+					<p>Total Followers: 23,004</p>
 				</div>
 				<div className="toggle-group">
 					Dark Mode <ToggleSwitch />
