@@ -10,12 +10,20 @@ export default function SocialMediaCard({
 	const renderGrowth = () => {
 		return growth.positive ? (
 			<p className="positive-following flex-center">
-				<img src="/images/icon-up.svg" alt="up arrow icon" />
+				<img
+					src="/images/icon-up.svg"
+					alt="up arrow icon"
+					style={{ padding: "0 4px" }}
+				/>
 				{growth.amount} Today
 			</p>
 		) : (
 			<p className="negative-following flex-center">
-				<img src="/images/icon-down.svg" alt="down arrow icon" />
+				<img
+					src="/images/icon-down.svg"
+					alt="down arrow icon"
+					style={{ padding: "0 4px" }}
+				/>
 				{growth.amount} Today
 			</p>
 		)
@@ -28,8 +36,8 @@ export default function SocialMediaCard({
 				{username}
 			</p>
 			<div style={{ textAlign: "center" }}>
-				<p>{following.amount}</p>
-				<p>{following.type}</p>
+				<p className="bigger-text">{following.amount}</p>
+				<p className="spread-text">{following.type}</p>
 			</div>
 			{renderGrowth()}
 		</div>
