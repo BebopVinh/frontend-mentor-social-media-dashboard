@@ -1,8 +1,18 @@
 const facebook = {
 	title: "facebook",
 	icon: "/images/icon-facebook.svg",
-	views: { name: "Page Views", amount: "87", percentage: "3", growth: true },
-	likes: { name: "Likes", amount: "52", percentage: "2", growth: false },
+	views: {
+		name: "Page Views",
+		amount: "87",
+		percentageAmount: "3",
+		positive: true,
+	},
+	likes: {
+		name: "Likes",
+		amount: "52",
+		percentageAmount: "2",
+		positive: false,
+	},
 }
 
 const instagram = {
@@ -11,17 +21,32 @@ const instagram = {
 	views: {
 		name: "Profile Views",
 		amount: "52k",
-		percentage: "1375",
-		growth: true,
+		percentageAmount: "1375",
+		positive: true,
 	},
-	likes: { name: "Likes", amount: "5462", percentage: "2257", growth: true },
+	likes: {
+		name: "Likes",
+		amount: "5462",
+		percentageAmount: "2257",
+		positive: true,
+	},
 }
 
 const twitter = {
 	title: "twitter",
 	icon: "/images/icon-twitter.svg",
-	views: { name: "Retweets", amount: "117", percentage: "303", growth: true },
-	likes: { name: "Likes", amount: "507", percentage: "553", growth: true },
+	views: {
+		name: "Retweets",
+		amount: "117",
+		percentageAmount: "303",
+		positive: true,
+	},
+	likes: {
+		name: "Likes",
+		amount: "507",
+		percentageAmount: "553",
+		positive: true,
+	},
 }
 
 const youtube = {
@@ -30,10 +55,15 @@ const youtube = {
 	views: {
 		name: "Total Views",
 		amount: "1407",
-		percentage: "12",
-		growth: false,
+		percentageAmount: "12",
+		positive: false,
 	},
-	likes: { name: "Likes", amount: "107", percentage: "19", growth: false },
+	likes: {
+		name: "Likes",
+		amount: "107",
+		percentageAmount: "19",
+		positive: false,
+	},
 }
 
 export const overViewData = [facebook, instagram, twitter, youtube]
